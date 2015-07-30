@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{36C1E84B-31AD-4913-98C2-E2A73291CEF4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>jxrlib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\Input Libs\jxrlib_1_1\common\include;..\..\Input Libs\jxrlib_1_1\image\sys;..\..\Input Libs\jxrlib_1_1\jxrgluelib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\common\include\guiddef.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\common\include\wmsal.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\common\include\wmspecstring.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\common\include\wmspecstrings_adt.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\common\include\wmspecstrings_strict.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\common\include\wmspecstrings_undef.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\image\decode\decode.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\image\encode\encode.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\jxrgluelib\JXRGlue.h" />
+    <ClInclude Include="..\..\Input Libs\jxrlib_1_1\jxrgluelib\JXRMeta.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\decode.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\JXRTranscode.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\postprocess.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\segdec.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\strdec.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\strdec_x86.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\strInvTransform.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\decode\strPredQuantDec.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\encode\encode.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\encode\segenc.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\encode\strenc.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\encode\strenc_x86.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\encode\strFwdTransform.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\image\encode\strPredQuantEnc.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\jxrgluelib\JXRGlue.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\jxrgluelib\JXRGlueJxr.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\jxrgluelib\JXRGluePFC.c" />
+    <ClCompile Include="..\..\Input Libs\jxrlib_1_1\jxrgluelib\JXRMeta.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
